@@ -1,6 +1,6 @@
 # INTRODUCCIÓN A LAS BASES DE DATOS
 
-![Ejemplo de imagen] (/bae_yessica/trim1/ud1/tareas/imagen)
+![Ejemplo de imagen] (./bae_yessica/trim1/ud1/tareas/imagen)
 
 1. ¿Qué es un archivo o fichero?
 2. Tipos de ficheros.
