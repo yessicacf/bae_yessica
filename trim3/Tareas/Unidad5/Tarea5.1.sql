@@ -27,6 +27,7 @@
 --4- Se quiere guardar la siguiente información en una tabla denominada "montofacturas":
  -- + numero: número de factura,
  -- + total: total en dinero de todos los items de cada factura (precioporunidad x cantidad).
+
 -- 5- Elimine la tabla "montofacturas" si existe.
     DROP TABLE IF EXISTS MONTOFACTURAS;
 
