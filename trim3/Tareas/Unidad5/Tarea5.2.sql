@@ -49,17 +49,25 @@
     INSERT INTO INSCRITOS CHAR(25333444), TINYINT(3), YEAR(2016), CHAR(s);
 
 --4- El club desea saber cuántos socios se han inscrito en cada deporte cada año, considerando sólo los deportes que tienen inscripciones:
+    SELECT D.NOMBRE,I.AÑO,COUNT(*) FROM DEPORTES AS D JOIN INSCRITOS AS I ON D.CODIGO=I.CODIGODEPORTE ON I.DOCUMENTO=S.DOCUMENTO GROUP BY D.NOMBRE,I.AÑO;
 
 --5- El club quiere almacenar esa información en una tabla. Elimine la tabla "inscritospordeporteporaño" si existe.
+    DROP TABLE IF EXISTS INSCRITOSPORDEPORTEPORANIO;
 
 --6- Cree la tabla utilizando la sentencia del punto 4:
-
+    CREATE TABLE INSCRITOSPORDEPORTEPORANIO;
+    SELECT D.NOMBRE,I.AÑO,COUNT(*) FROM DEPORTES AS D JOIN INSCRITOS AS I ON D.CODIGO=I.CODIGODEPORTE ON I.DOCUMENTO=S.DOCUMENTO GROUP BY D.NOMBRE,I.AÑO;
 
 --7- Muestre todos los registros de la nueva tabla.
+    SHOW TABLE INSCRITOSPORDEPORTEPORANIO;
 
 --8- El club desea saber cuántas veces se ha inscrito un socio en algún deporte:
-
+    SELECT S.NOMBRE,COUNT(I.DOCUMENTO) FROM SOCIOS AS S LEFT JOIN INSCRITOS AS I ON S.DOCUMENTO=I.DOCUMENTO LEFT JOIN DEPORTES AS D ON I.CODIGODEPORTE=D.CODIGO GROUP BY S.NOMBRE;
 
 --9- Elimine la tabla "sociosdeporte" si existe.
+    DROP TABLE IF EXISTS SOCIOSDEPORTE; 
 
 --10- Guarde la información del punto 8 en una tabla, creándola a partir de esa consulta:
+    CREATE TABLE SOCIOSDEPORTE;
+    SELECT S.NOMBRE,COUNT(I.DOCUMENTO) FROM SOCIOS AS S LEFT JOIN INSCRITOS AS I ON S.DOCUMENTO=I.DOCUMENTO LEFT JOIN DEPORTES AS D ON I.CODIGODEPORTE=D.CODIGO GROUP BY S.NOMBRE;
+
