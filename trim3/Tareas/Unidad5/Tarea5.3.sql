@@ -31,12 +31,15 @@
     INSERT INTO SOCIOS INT(150), CHAR(25333444), VARCHAR('Agustin Perez'), VARCHAR('Avellaneda 1234');
     INSERT INTO SOCIOS INT(230), CHAR(26333444), VARCHAR('Maria Perez'), VARCHAR('Urquiza 283');
     INSERT INTO SOCIOS INT(23), CHAR(29333444), VARCHAR('Agustin Perez'), VARCHAR('Urquiza 283');
+    INSERT INTO INSCRITOS INT(23), VARCHAR('Natacion'), YEAR(2015), CHAR(s);
+    INSERT INTO INSCRITOS INT(23), VARCHAR('Tenis'), YEAR(2015), CHAR(s);
+    INSERT INTO INSCRITOS INT(23), VARCHAR('Tenis'), YEAR(2016), CHAR(s);
+    INSERT INTO INSCRITOS INT(102), VARCHAR('Natacion'), YEAR(2016), CHAR(s);
+    INSERT INTO INSCRITOS INT(102), VARCHAR('Tenis'), YEAR(2015), CHAR(s);
 
-
- 
 --4- El socio con documento "23333444" quiere inscribirse en "basquet" este año, pero no recuerda su número de socio. 
 --Inscriba al socio en la tabla "inscritos" buscando en la tabla "socios" el número de socio a partir del número de documento:
-
+    INSERT INTO INSCRITOS SELECT NUMEROSOCIO, VARCHAR('Ana Garcia'), YEAR(2021), CHAR(s) FROM SOCIOS
 
 --5- Intente inscribir una persona cuyo número de documento no exista en la tabla "socios":
 
@@ -56,4 +59,5 @@
 
 
 --8- Vea si las inscripciones anteriores se cargaron:
+    SHOW TABLE INSCRITOS;
  
