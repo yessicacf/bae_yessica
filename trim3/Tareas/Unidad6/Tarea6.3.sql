@@ -45,7 +45,7 @@ select * from vista_aprobados;
 select * from alumnos;
 
 --10. Modificamos la nota de un alumno aprobado mediante la vista:
-update vista_nota_alumnos_aprobados set nota=10 where documento='30444444';
+update vista_aprobados set nota=10 where documento='30444444';
 
 --11. Mostramos la tabla `alumnos`:
 select * from alumnos;
