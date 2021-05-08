@@ -26,4 +26,4 @@ PUBLICA(codigo_sucursal*, codigo_revista*)
 
 codigo_sucursal -> FOREIGN KEY de SUCURSAL.
 
-codigo_revista -> FOREIGN KEY de REVISTA).
+codigo_revista -> FOREIGN KEY de REVISTA.
