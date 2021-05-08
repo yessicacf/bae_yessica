@@ -2,7 +2,7 @@
 
 ## Modelo Entidad-Relación:
 
-!https://github.com/yessicacf21/bae_yessica/blob/develop/Cadena%20editorial%20(1).png
+https://github.com/yessicacf21/bae_yessica/blob/develop/Cadena%20editorial%20(1).png
 
 ## Paso a tablas:
 
